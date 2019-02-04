@@ -5,23 +5,14 @@
 body {
     font-family: Arial;
     padding: 10px;
-    background: rgb(24,24,24);
-}
-.header {
-    padding: 30px;
-    text-align: center;
-    background: rgb(160, 160, 160);
+    background: linear-gradient(to left, #E6DADA, #274046);
 }
 
-.header h1 {
-    font-size: 50px;
-
-}
 .topnav {
     overflow: hidden;
     background-color: #333;
+    position: sticky;
 }
-
 .topnav a {
     float: left;
     display: block;
@@ -33,23 +24,28 @@ body {
 
 .topnav a:hover {
     background-color: #ddd;
-    color: black;
 }
 
-
-.TimeLineText {
-    background-color: rgb(160, 160, 160);
-    padding: 30px;
-    margin-top: 60px;
-    width: 75%
+.topnav img{
+  float: right;
 }
-
-dl > dt > dd
+.TimeLineText
 {
-  border: 1px solid white;
-  padding: 10px;
-  width: 1500px;
-  height: 700px;
-  text-align: justify;
-  font-size: 25px;
+  border-style: solid;
+  border-radius: 5px;
+  background-color: white;
+  margin: 50px;
+  padding: 50px;
+}
+
+.TimeLineText h2{
+  color: #66ff66;
+}
+.inputField
+{
+  border-style: solid;
+  border-radius: 5px;
+  background-color: white;
+  margin: 50px;
+  padding: 50px;
 }
