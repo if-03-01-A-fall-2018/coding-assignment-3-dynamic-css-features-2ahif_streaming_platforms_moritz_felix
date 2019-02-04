@@ -17,6 +17,11 @@ body {
   margin-bottom: 50px;
   margin-top: 0;
   z-index: 1000;
+
+}
+.topnav img{
+
+  float: right;
 }
 
 .topnav a {
