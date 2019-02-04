@@ -4,32 +4,15 @@
 
 body {
     font-family: Arial;
-    background: rgb(24,24,24);
-}
-.header {
-    padding: 30px;
-    text-align: center;
-    background: rgb(160, 160, 160);
-}
-
-.header h1 {
-    font-size: 50px;
-
-}
-.text{
-  border: 1px solid white;
-  padding: 60px;
-  width: 1500px;
-  height: 700px;
-  text-align: justify;
-  font-size: 25px;
+    padding: 10px;
+    background: linear-gradient(to left, #E6DADA, #274046);
 }
 
 .topnav {
     overflow: hidden;
     background-color: #333;
+    position: sticky;
 }
-
 .topnav a {
     float: left;
     display: block;
@@ -41,8 +24,32 @@ body {
 
 .topnav a:hover {
     background-color: #ddd;
-    color: black;
 }
+
+.topnav img{
+  float: right;
+}
+.text
+{
+  border-style: solid;
+  border-radius: 5px;
+  background-color: white;
+  margin: 50px;
+  padding: 50px;
+}
+
+.textext h2{
+  color: #f00;
+}
+.inputField
+{
+  border-style: solid;
+  border-radius: 5px;
+  background-color: white;
+  margin: 50px;
+  padding: 50px;
+}
+
 
 table.onDemandStreaming
 {

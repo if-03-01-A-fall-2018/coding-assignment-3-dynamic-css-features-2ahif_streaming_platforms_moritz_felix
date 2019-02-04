@@ -29,7 +29,7 @@ body {
 .topnav img{
   float: right;
 }
-.liveStreaming
+.text
 {
   border-style: solid;
   border-radius: 5px;
@@ -38,7 +38,7 @@ body {
   padding: 50px;
 }
 
-.liveStreaming h2{
+.text h2{
   color: #f00;
 }
 .inputField

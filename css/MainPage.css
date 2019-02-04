@@ -5,14 +5,11 @@ body {
 }
 
 .topnav {
-    overflow: hidden;
-    background-color: #333;
-    width: 100%;
-    top: 0;
-    position: fixed;
-    margin-bottom: 50px;
-    margin-top: 0;
-    z-index: 1000;
+  overflow: hidden;
+  background-color: #333;
+  width: 100%;
+  margin-bottom: 50px;
+  margin-top: 0;
   }
 .topnav a {
     float: left;
