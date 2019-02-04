@@ -7,17 +7,12 @@ body {
     padding: 10px;
     background: linear-gradient(to left, #E6DADA, #274046);
 }
-}
+
 .topnav {
     overflow: hidden;
     background-color: #333;
-    width: 100%;
-    top: 0;
-    position: fixed;
-    margin-bottom: 50px;
-    margin-top: 0;
-    z-index: 1000;
-  }
+    position: sticky;
+}
 .topnav a {
     float: left;
     display: block;
@@ -34,18 +29,18 @@ body {
 .topnav img{
   float: right;
 }
-
-.amazon_videoText {
+.amazon_videoText
+{
   border-style: solid;
   border-radius: 5px;
   background-color: white;
   margin: 50px;
   padding: 50px;
 }
-.amazon_videoText h2{
-  color: #1695F6;
-}
 
+.amazon_videoText h2{
+  color: #32FCF3;
+}
 .inputField
 {
   border-style: solid;
