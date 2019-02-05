@@ -1,0 +1,81 @@
+body {
+    font-family: Arial;
+    padding: 10px;
+    background: linear-gradient(to left, #E6DADA, #274046);
+}
+
+.text
+{
+  border-style: solid;
+  border-radius: 35px;
+  background: white;
+  margin: 50px;
+  padding: 50px;
+  box-shadow: 10px 10px 5px grey;
+}
+
+.text a
+{
+  text-decoration: none;
+}
+
+.background
+{
+  border-style: solid;
+  border-radius: 5px;
+  background: linear-gradient(to left, #E6DADA, #274046);
+  height: 100px;
+  width: 200px;
+  margin: 20px;
+}
+
+.box-shadow
+{
+  border-style: solid;
+  border-radius: 5px;
+  width: 200px;
+  height: 100px;
+  box-shadow: 10px 10px 5px grey;
+  margin: 20px;
+}
+
+.box-rounded-corner
+{
+  border-style: solid;
+  border-radius: 35px;
+  width: 200px;
+  height: 100px;
+  margin: 20px;
+}
+table.LinkedPages {
+    float: right;
+    margin-top: 200px;
+    margin-right: 100px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 5px;
+}
+
+table.LinkedPages td, th {
+    border: 1px solid transparent;
+    height: 30px;
+    transition: all 0.3s;
+}
+
+table.LinkedPages th {
+    background: #DFDFDF;
+    font-weight: bold;
+}
+
+table.LinkedPages td {
+    background: #FAFAFA;
+    text-align: center;
+}
+table.LinkedPages a {
+    text-decoration: none;
+    color: black;
+}
+
+tr:nth-child(even) td { background: #F1F1F1; }
+tr:nth-child(odd) td { background: #FEFEFE; }
+tr td:hover { background: #666; color: #FFF; }

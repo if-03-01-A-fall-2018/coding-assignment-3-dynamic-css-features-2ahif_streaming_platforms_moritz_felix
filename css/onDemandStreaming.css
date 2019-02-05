@@ -36,21 +36,12 @@ body {
   background-color: white;
   margin: 50px;
   padding: 50px;
+  box-shadow: 10px 10px 5px grey;
 }
 
 .textext h2{
   color: #f00;
 }
-.inputField
-{
-  border-style: solid;
-  border-radius: 5px;
-  background-color: white;
-  margin: 50px;
-  padding: 50px;
-}
-
-
 table.onDemandStreaming
 {
   float:right;

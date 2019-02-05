@@ -36,6 +36,7 @@ body {
   background-color: white;
   margin: 50px;
   padding: 50px;
+  box-shadow: 10px 10px 5px grey;
 }
 
 .netflixText h2{
@@ -48,4 +49,5 @@ body {
   background-color: white;
   margin: 50px;
   padding: 50px;
+  box-shadow: 10px 10px 5px grey;
 }
