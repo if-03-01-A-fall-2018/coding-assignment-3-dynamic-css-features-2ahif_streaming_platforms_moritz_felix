@@ -1,34 +1,10 @@
-var netflix = 0;
-var amazon = 0;
 
-
-function CheckBox()
+function CheckBox(form)
 {
-
+  var test = 0;
+  if (form.box1.checked)
+  {
+    test++;
+  }
+  console.log(test);
 }
-
-if(document.getElementById("q1").checked == true || document.getElementById("q2").checked == true)
-{
-   netflix++;
-}
-
-else
-{
-   amazon++;
-}
-if (document.getElementById("submit").checked == true) {
-
-}
-
-var choice;
-
-if (netflix > amazon)
-{
-  choice = "Netflix";
-}
-else {
-  choice = "Amazon";
-}
-
-
-console.log(choice);
