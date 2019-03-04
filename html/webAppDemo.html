@@ -2,18 +2,19 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <script type="text/javascript" src="webApp.js"></script>  
     <title></title>
   </head>
   <body>
-    <form method="get"> <!-- Formular -->
-        <input type="checkbox" name="box1" value="Auswahl1"> Auswahl1
+    <form method="get">
+      <form id="myform">
+        <input type="checkbox" name="box1" id="1"/> Netflix
         <br>
-        <input type="checkbox" name="box2" value="Auswahl2"> Auswahl2
+        <input type="checkbox" name="box2" id="2"/> Amazon
         <br>
-        <input type="checkbox" name="box3" value="Auswahl3"> Auswahl3
+        <input type="checkbox" name="box3" id="3"/> Netflix
         <br>
-        <input type="button" name="box4" value="submit" onclick="CheckBox(this.form)">
+        <button type="submit"  onsubmit="CheckBox()">submit</button>
     </form>
+    <script type="text/javascript" src="../javascript/webApp.js"></script>
   </body>
 </html>
