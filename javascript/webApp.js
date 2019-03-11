@@ -1,160 +1,69 @@
-const CLIENT_ID = '4cNswoNqM2wVFHPg';
+function tabulateAnswers() {
+  // initialize variables for each choice's score
+  // If you add more choices and outcomes, you must add another variable here.
+  var c1score = 0;
+  var c2score = 0;
+  var c3score = 0;
+  var c4score = 0;
 
-const drone = new ScaleDrone(CLIENT_ID, {
-  data: { // Will be sent out as clientData via events
-    name: getRandomName(),
-    color: getRandomColor(),
-  },
-});
 
-let members = [];
+  var choices = document.getElementsByTagName('input');
 
-drone.on('open', error => {
-  if (error) {
-    return console.error(error);
-  }
-  console.log('Successfully connected to Scaledrone');
+  for (i=0; i<choices.length; i++)
+  {
 
-  const room = drone.subscribe('observable-room');
-  room.on('open', error => {
-    if (error) {
-      return console.error(error);
+    if (choices[i].checked)
+    {
+
+      if (choices[i].value == 'c1')
+      {
+        c1score = c1score + 1;
+      }
+
+      if (choices[i].value == 'c2')
+      {
+        c2score = c2score + 1;
+      }
+
+      if (choices[i].value == 'c3')
+      {
+        c3score = c3score + 1;
+      }
+
+      if (choices[i].value == 'c4')
+      {
+        c4score = c4score + 1;
+      }
+
     }
-    console.log('Successfully joined room');
-  });
-
-  room.on('members', m => {
-    members = m;
-    updateMembersDOM();
-  });
-
-  room.on('member_join', member => {
-    members.push(member);
-    updateMembersDOM();
-  });
-
-  room.on('member_leave', ({id}) => {
-    const index = members.findIndex(member => member.id === id);
-    members.splice(index, 1);
-    updateMembersDOM();
-  });
-
-  room.on('data', (text, member) => {
-    if (member) {
-      addMessageToListDOM(text, member);
-    } else {
-      // Message is from server
-    }
-  });
-});
-
-drone.on('close', event => {
-  console.log('Connection was closed', event);
-});
-
-drone.on('error', error => {
-  console.error(error);
-});
-
-function getRandomName() {
-  var name = document.getElementById('1').value;
-  return (
-    adjs[Math.floor(Math.random() * adjs.length)] +
-    "_" +
-    nouns[Math.floor(Math.random() * nouns.length)]
-  );
-}
-
-function getRandomColor() {
-  return '#' + Math.floor(Math.random() * 0xFFFFFF).toString(16);
-}
-
-//------------- DOM STUFF
-
-const DOM = {
-  membersCount: document.querySelector('.members-count'),
-  membersList: document.querySelector('.members-list'),
-  messages: document.querySelector('.messages'),
-  input: document.querySelector('.message-form__input'),
-  form: document.querySelector('.message-form'),
-};
-
-DOM.form.addEventListener('submit', sendMessage);
-
-function sendMessage() {
-  const value = DOM.input.value;
-  if (value === '') {
-    return;
   }
-  DOM.input.value = '';
-  drone.publish({
-    room: 'observable-room',
-    message: value,
-  });
-}
 
-function createMemberElement(member) {
-  const { name, color } = member.clientData;
-  const el = document.createElement('div');
-  el.appendChild(document.createTextNode(name));
-  el.className = 'member';
-  el.style.color = color;
-  return el;
-}
+  var maxscore = Math.max(c1score,c2score,c3score,c4score);
 
-function updateMembersDOM() {
-  DOM.membersCount.innerText = `${members.length} users in room:`;
-  DOM.membersList.innerHTML = '';
-  members.forEach(member =>
-    DOM.membersList.appendChild(createMemberElement(member))
-  );
-}
-
-function createMessageElement(text, member) {
-  const el = document.createElement('div');
-  el.appendChild(createMemberElement(member));
-  el.appendChild(document.createTextNode(text));
-  el.className = 'message';
-  return el;
-}
-
-function addMessageToListDOM(text, member) {
-  const el = DOM.messages;
-  const wasTop = el.scrollTop === el.scrollHeight - el.clientHeight;
-  el.appendChild(createMessageElement(text, member));
-  if (wasTop) {
-    el.scrollTop = el.scrollHeight - el.clientHeight;
-  }
-}
-
-/*function CheckBox()
-{
-  let netflix = 0;
-  let amazon = 0;
-
-  if (document.getElementById("1").checked === true)
+  var answerbox = document.getElementById('answer');
+  if (c1score == maxscore)
   {
-    netflix++;
+    answerbox.innerHTML = "You are a computer researcher! You will enjoy developing algorithms, and doing things with computers no one else has done before. For example, researchers sent a robot to the moon, built a computer to beat the best humans in Jeopardy, and are creating robots to do your chores for you. Computer researchers typically go to college and work at universities, or as a part of the research and development team in companies.";
   }
-  else if (document.getElementById("2").checked === true)
+
+  if (c2score == maxscore)
   {
-    amazon++;
+    answerbox.innerHTML = "You are an altruistic coder! You love to help people and feel the positive impact of your work every day. Altrustic coders are out there every day making the world a better place. Computer scientists write software to more effectively help doctors diagnose illnesses such as cancer, connect people in third world countries to education and medical resources on the internet, code websites and software for nonprofit organizations, and much more!";
   }
-  else if (document.getElementById("3").checked === true)
+
+  if (c3score == maxscore)
+  { 
+    answerbox.innerHTML = "You are a developer! Developers create games, apps, social media, movies, and all sorts of fun programs that people enjoy. These coders work on projects such as Minecraft, Poptropica, and Youtube. Developers need sharp coding skills, are great debuggers, and need to work well in a team of other developers.";
+  }
+
+  if (c4score == maxscore)
   {
-    netflix++;
+    answerbox.innerHTML = "You are the future CEO of a new startup! You enjoy taking risks and building the next big thing that no one has even thought of before. For example, billionare Mark Zuckerberg founded Facebook in 2004, a project he started inside his dorm room in college which eventually turned into a social networking revolution that changed the world.";
   }
-  alert("recommended: "+netflix);
+
 }
 
-<form method="get">
-  <form id="myform">
-    <input type="checkbox" id="1"/> Netflix
-    <br>
-    <input type="checkbox" id="2"/> Amazon
-    <br>
-    <input type="checkbox" id="3"/> Netflix
-    <br>
-    <button type="submit" onsubmit="CheckBox()">submit</button>
-</form>
-<script type="text/javascript" src="../javascript/webApp.js"></script>*/
+function resetAnswer() {
+  var answerbox = document.getElementById('answer');
+  answerbox.innerHTML = "Your result will show up here!";
+}
