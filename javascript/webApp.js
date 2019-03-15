@@ -1,6 +1,5 @@
 function tabulateAnswers() {
-  // initialize variables for each choice's score
-  // If you add more choices and outcomes, you must add another variable here.
+
   var c1score = 0;
   var c2score = 0;
   var c3score = 0;
@@ -52,7 +51,7 @@ function tabulateAnswers() {
   }
 
   if (c3score == maxscore)
-  { 
+  {
     answerbox.innerHTML = "You are a developer! Developers create games, apps, social media, movies, and all sorts of fun programs that people enjoy. These coders work on projects such as Minecraft, Poptropica, and Youtube. Developers need sharp coding skills, are great debuggers, and need to work well in a team of other developers.";
   }
 
@@ -62,6 +61,14 @@ function tabulateAnswers() {
   }
 
 }
+
+$('.btn-read-more').click(function() {
+    var id = $(this).attr('id');
+    if (id=="read-one"){
+        $("#read-one").fadeOut('fast');
+        $("#para-one").delay(900).fadeIn('slow');
+    }
+});
 
 function resetAnswer() {
   var answerbox = document.getElementById('answer');
