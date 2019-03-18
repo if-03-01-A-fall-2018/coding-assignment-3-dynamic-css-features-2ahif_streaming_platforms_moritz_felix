@@ -62,13 +62,14 @@ function tabulateAnswers() {
 
 }
 
-$('.btn-read-more').click(function() {
-    var id = $(this).attr('id');
-    if (id=="read-one"){
-        $("#read-one").fadeOut('fast');
-        $("#para-one").delay(900).fadeIn('slow');
-    }
-});
+$( '.btn-read-more' ).click(function() {
+        var id = $(this).attr('id');
+            if(id=="read-one") {
+                $("#read-one").hide(300, function () {
+                    $("#para-one").show(300);
+                });
+         }
+    });
 
 function resetAnswer() {
   var answerbox = document.getElementById('answer');
