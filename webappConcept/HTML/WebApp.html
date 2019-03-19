@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="../JS/webApp.js"></script>
+    <link rel="stylesheet" type="text/css" href="../CSS/site1.css">
+    <title></title>
+  </head>
+  <body>
+    <div class="block1" id="block1">
+
+      <label><input type="checkbox" name="q1" value="c1">
+      Experimenting, discovering, and learning
+      </label><br />
+      <label><input type="checkbox" name="q1" value="c2">
+      Helping others
+      </label><br />
+      <label><input type="checkbox" name="q1" value="c3">
+      Music, movies, games, and making others laugh
+      </label><br />
+      <label><input type="checkbox" name="q1" value="c4">
+      Taking risks
+      </label><br />
+    </div>
+
+    <button onclick="ShowBlock2()" id="button1">Next Questions</button>
+
+    <div class="block2" id="block2">
+      <label><input type="checkbox" name="q2" value="c1">
+        Experimenting, discovering, and learning
+      </label><br />
+      <label><input type="checkbox" name="q2" value="c2">
+        Helping others
+      </label><br />
+      <label><input type="checkbox" name="q2" value="c3">
+        Music, movies, games, and making others laugh
+      </label><br />
+      <label><input type="checkbox" name="q2" value="c4">
+        Taking risks
+      </label><br />
+    </div>
+
+    <button onclick="ShowBlock3()" id="button2" style= "display:none">Next Questions</button>
+
+    <div class="block3" id="block3" style="display:none">
+    <label><input type="checkbox" name="q3" value="c1">
+      People who make great discoveries
+    </label><br />
+    <label><input type="checkbox" name="q3" value="c2">
+      People who make sacrifices to help others
+    </label><br />
+    <label><input type="checkbox" name="q3" value="c3">
+      Creative, artistic, and expressive people
+    </label><br />
+    <label><input type="checkbox" name="q3" value="c4">
+      People who build innovative products
+    </label><br />
+    </div>
+
+    <button type="submit" id="submit" onclick="tabulateAnswers()">Submit Your Answers</button>
+    <button type="reset" id="reset" onclick="resetAnswer()">Reset</button>
+
+  <div id="answer">Your result will show up here!</div>
+
+  </body>
+</html>
