@@ -1,7 +1,5 @@
-
-h1
-{
-  text-align: center;
+#block2 {
+    display: none;
 }
 .topnav {
   overflow: hidden;
@@ -25,4 +23,14 @@ h1
 
 .topnav img{
   float: right;
+}
+
+#block1,#block2,#block3
+{
+  border-style: solid;
+  border-radius: 5px;
+  background-color: white;
+  margin: 50px;
+  padding: 50px;
+  box-shadow: 10px 10px 5px grey;
 }
