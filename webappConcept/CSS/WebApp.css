@@ -33,4 +33,19 @@
   margin: 50px;
   padding: 50px;
   box-shadow: 10px 10px 5px grey;
+  height: 200px;
+  width: 200px;
+  text-align: center;
+}
+
+#answer
+{
+  border-style: solid;
+  border-radius: 5px;
+  background-color: white;
+  margin: 50px;
+  padding: 50px;
+  box-shadow: 10px 10px 5px grey;
+  height: 30px;
+  width: 100px;
 }
