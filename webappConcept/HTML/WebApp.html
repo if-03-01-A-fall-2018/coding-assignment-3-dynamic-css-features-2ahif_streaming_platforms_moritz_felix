@@ -19,20 +19,44 @@
     </div>
   </section>
 
+
+  <form>
+  	<div class="radiobtn">
+  		<input type="radio" id="huey"
+  					 name="drone" value="huey" checked />
+  		<label for="huey">Huey</label>
+  	</div>
+
+  	<div class="radiobtn">
+  		<input type="radio" id="dewey"
+  					 name="drone" value="dewey" />
+  		<label for="dewey">Dewey</label>
+  	</div>
+
+  	<div class="radiobtn">
+  		<input type="radio" id="louie"
+  					 name="drone" value="louie" />
+  		<label for="louie">Louie</label>
+  	</div>
+
+  </form>
     <div class="block1" id="block1">
-      Questionblock 1 of 3<br/>
-      <label><input type="radio" name="q1" value="c1">
-        1
-      </label><br />
-      <label><input type="radio" name="q1" value="c2">
-        2
-      </label><br />
-      <label><input type="radio" name="q1" value="c3">
-        3
-      </label><br />
-      <label><input type="radio" name="q1" value="c4">
-        4
-      </label><br />
+      <form>
+	       <div class="radiobtn">
+		         <input type="radio" name="q1" value="c1" checked />
+		         <label for="huey">Huey</label>
+	       </div>
+
+	       <div class="radiobtn">
+		         <input type="radio" name="q2" value="c2" />
+             <label for="dewey">Dewey</label>
+	       </div>
+
+         <div class="radiobtn">
+		         <input type="radio" name="q3" value="c3" />
+		         <label for="louie">Louie</label>
+	       </div>
+      </form>
 
       <button onclick="ShowBlock2()" id="button1">Next Questions</button>
     </div>
