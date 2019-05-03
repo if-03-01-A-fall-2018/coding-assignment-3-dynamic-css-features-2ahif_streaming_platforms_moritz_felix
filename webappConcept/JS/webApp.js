@@ -56,15 +56,45 @@ function resetAnswer() {
 
 function ShowBlock2()
 {
-  document.getElementById("block1").style.display = "none";
-  document.getElementById("block2").style.display = "flex";
+  document.getElementById("block1").style.visibility = "hidden";
+  document.getElementById("block2").style.visibility = "visible";
   document.getElementById("button1").style.display = "none";
   document.getElementById("button2").style.display = "flex";
 }
 
 function ShowBlock3()
 {
-  document.getElementById("block2").style.display = "none";
-  document.getElementById("block3").style.display = "flex";
+  document.getElementById("block2").style.visibility = "hidden";
+  document.getElementById("block3").style.visibility = "visible";
   document.getElementById("button2").style.display = "none";
+  document.getElementById("button3").style.display = "flex";
+}
+function ShowBlock4()
+{
+  document.getElementById("block3").style.visibility = "hidden";
+  document.getElementById("block4").style.visibility = "visible";
+  document.getElementById("button3").style.display = "none";
+  document.getElementById("button4").style.display = "flex";
+}
+
+function ShowBlock5()
+{
+  document.getElementById("block4").style.visibility = "hidden";
+  document.getElementById("block5").style.visibility = "visible";
+  document.getElementById("button4").style.display = "none";
+  document.getElementById("button5").style.display = "flex";
+}
+function ShowBlock6()
+{
+  document.getElementById("block5").style.visibility = "hidden";
+  document.getElementById("block6").style.visibility = "visible";
+  document.getElementById("button5").style.display = "none";
+  document.getElementById("button6").style.display = "flex";
+}
+
+function ShowBlock7()
+{
+  document.getElementById("block6").style.visibility = "hidden";
+  document.getElementById("block7").style.visibility = "visible";
+  document.getElementById("button6").style.display = "none";
 }

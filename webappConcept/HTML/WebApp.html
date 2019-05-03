@@ -19,51 +19,30 @@
     </div>
   </section>
 
+        <div class="block1" id="block1">
+      Questionblock 1 of 7
+      <br/><label><input type="radio" name="q1" value="c1">
+        1
+      </label><br/>
+      <label><input type="radio" name="q1" value="c2">
+        2
+      </label><br />
+      <label><input type="radio" name="q1" value="c3">
+        3
+      </label><br />
+      <label><input type="radio" name="q1" value="c4">
+        4
+      </label><br />
 
-  <form>
-  	<div class="radiobtn">
-  		<input type="radio" id="huey"
-  					 name="drone" value="huey" checked />
-  		<label for="huey">Huey</label>
-  	</div>
-
-  	<div class="radiobtn">
-  		<input type="radio" id="dewey"
-  					 name="drone" value="dewey" />
-  		<label for="dewey">Dewey</label>
-  	</div>
-
-  	<div class="radiobtn">
-  		<input type="radio" id="louie"
-  					 name="drone" value="louie" />
-  		<label for="louie">Louie</label>
-  	</div>
-
-  </form>
-    <div class="block1" id="block1">
-      <form>
-	       <div class="radiobtn">
-		         <input type="radio" name="q1" value="c1" checked />
-		         <label for="huey">Huey</label>
-	       </div>
-
-	       <div class="radiobtn">
-		         <input type="radio" name="q2" value="c2" />
-             <label for="dewey">Dewey</label>
-	       </div>
-
-         <div class="radiobtn">
-		         <input type="radio" name="q3" value="c3" />
-		         <label for="louie">Louie</label>
-	       </div>
-      </form>
 
       <button onclick="ShowBlock2()" id="button1">Next Questions</button>
+
+
     </div>
 
     <div class="block2" id="block2">
-      Questionblock 2 of 3<br/>
-      <label><input type="radio" name="q2" value="c1">
+      Questionblock 2 of 3
+      <br/><label><input type="radio" name="q2" value="c1">
         1
       </label><br />
       <label><input type="radio" name="q2" value="c2">
@@ -76,12 +55,15 @@
         4
       </label><br />
 
-      <button onclick="ShowBlock3()" id="button2" style= "display:none">Next Questions</button>
+
+      <button onclick="ShowBlock3()" id="button2">Next Questions</button>
+
+
     </div>
 
-    <div class="block3" id="block3" style="display:none">
-      Questionblock 3 of 3<br/>
-      <label><input type="radio" name="q3" value="c1">
+    <div class="block3" id="block3">
+      Questionblock 3 of 7
+      <br/><label><input type="radio" name="q3" value="c1">
         1
       </label><br />
       <label><input type="radio" name="q3" value="c2">
@@ -95,10 +77,89 @@
       </label><br />
     </div>
 
+
+    <button onclick="ShowBlock4()" id="button3">Next Questions</button>
+
+
+    <div class="block4" id="block4">
+  Questionblock 4 of 7
+  <br/><label><input type="radio" name="q1" value="c1">
+    1
+  </label><br/>
+  <label><input type="radio" name="q1" value="c2">
+    2
+  </label><br />
+  <label><input type="radio" name="q1" value="c3">
+    3
+  </label><br />
+  <label><input type="radio" name="q1" value="c4">
+    4
+  </label><br />
+
+
+  <button onclick="ShowBlock5()" id="button4">Next Questions</button>
+
+
+</div>
+
+<div class="block5" id="block5">
+  Questionblock 5 of 7
+  <br/><label><input type="radio" name="q2" value="c1">
+    1
+  </label><br />
+  <label><input type="radio" name="q2" value="c2">
+    2
+  </label><br />
+  <label><input type="radio" name="q2" value="c3">
+    3
+  </label><br />
+  <label><input type="radio" name="q2" value="c4">
+    4
+  </label><br />
+
+
+  <button onclick="ShowBlock6()" id="button5">Next Questions</button>
+
+
+</div>
+
+<div class="block6" id="block6">
+  Questionblock 6 of 7
+  <br/><label><input type="radio" name="q3" value="c1">
+    1
+  </label><br />
+  <label><input type="radio" name="q3" value="c2">
+    2
+  </label><br />
+  <label><input type="radio" name="q3" value="c3">
+    3
+  </label><br />
+  <label><input type="radio" name="q3" value="c4">
+    4
+  </label><br />
+</div>
+
+
+<button onclick="ShowBlock7()" id="button6">Next Questions</button>
+
+
+<div class="block7" id="block7">
+  Questionblock 7 of 7
+  <br/><label><input type="radio" name="q3" value="c1">
+    1
+  </label><br />
+  <label><input type="radio" name="q3" value="c2">
+    2
+  </label><br />
+  <label><input type="radio" name="q3" value="c3">
+    3
+  </label><br />
+  <label><input type="radio" name="q3" value="c4">
+    4
+  </label><br />
+</div>
+
     <button type="submit" id="submit" onclick="tabulateAnswers()">Submit Your Answers</button>
     <button type="reset" id="reset" onclick="resetAnswer()">Reset</button>
 
    <div id="answer">Your result will show up here!</div>
-
-  </body>
-</html>
