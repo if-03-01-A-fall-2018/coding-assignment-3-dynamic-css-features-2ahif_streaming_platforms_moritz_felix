@@ -8,7 +8,7 @@
   </head>
   <body>
 
-    <section>
+  <section>
     <div class="topnav">
       <a href="../../html/MainPage.html">Home</a>
       <a href="../../html/netflix.html">Netflix</a>
@@ -19,41 +19,27 @@
     </div>
   </section>
 
-        <div class="block1" id="block1">
-      Questionblock 1 of 7
-      <br/><label><input type="radio" name="q1" value="c1">
-        1
-      </label><br/>
+    <div class="question" id="block1">
+      I want to use the streaming service for …
+      <br/>
+      <input id="q1" type="radio" name="q1" value="c1">
+      <label for="q1">films, documentations</label>
+      <br/>
       <label><input type="radio" name="q1" value="c2">
-        2
+        series
       </label><br />
-      <label><input type="radio" name="q1" value="c3">
-        3
-      </label><br />
-      <label><input type="radio" name="q1" value="c4">
-        4
-      </label><br />
-
-
       <button onclick="ShowBlock2()" id="button1">Next Questions</button>
-
-
     </div>
 
-    <div class="block2" id="block2">
-      Questionblock 2 of 3
+    <div class="question" id="block2">
+    I want to use it …
       <br/><label><input type="radio" name="q2" value="c1">
-        1
+        sometimes
       </label><br />
       <label><input type="radio" name="q2" value="c2">
-        2
+        often
       </label><br />
-      <label><input type="radio" name="q2" value="c3">
-        3
-      </label><br />
-      <label><input type="radio" name="q2" value="c4">
-        4
-      </label><br />
+
 
 
       <button onclick="ShowBlock3()" id="button2">Next Questions</button>
@@ -61,40 +47,34 @@
 
     </div>
 
-    <div class="block3" id="block3">
-      Questionblock 3 of 7
+    <div class="question" id="block3">
+      I only want to use the video streaming service.
       <br/><label><input type="radio" name="q3" value="c1">
-        1
+        yes
       </label><br />
       <label><input type="radio" name="q3" value="c2">
-        2
+        no
       </label><br />
-      <label><input type="radio" name="q3" value="c3">
-        3
-      </label><br />
-      <label><input type="radio" name="q3" value="c4">
-        4
-      </label><br />
+
+
+      <button onclick="ShowBlock4()" id="button3">Next Questions</button>
+
+
     </div>
 
 
-    <button onclick="ShowBlock4()" id="button3">Next Questions</button>
 
 
-    <div class="block4" id="block4">
-  Questionblock 4 of 7
+
+    <div class="question" id="block4">
+  I want to use further service like music streaming or Prime delivery service as well.
   <br/><label><input type="radio" name="q1" value="c1">
-    1
+    yes
   </label><br/>
   <label><input type="radio" name="q1" value="c2">
-    2
+    no
   </label><br />
-  <label><input type="radio" name="q1" value="c3">
-    3
-  </label><br />
-  <label><input type="radio" name="q1" value="c4">
-    4
-  </label><br />
+
 
 
   <button onclick="ShowBlock5()" id="button4">Next Questions</button>
@@ -102,20 +82,15 @@
 
 </div>
 
-<div class="block5" id="block5">
-  Questionblock 5 of 7
+<div class="question" id="block5">
+  I want … users to stream at the same time.
   <br/><label><input type="radio" name="q2" value="c1">
-    1
+    fewer than 2
   </label><br />
   <label><input type="radio" name="q2" value="c2">
-    2
+    more than 2
   </label><br />
-  <label><input type="radio" name="q2" value="c3">
-    3
-  </label><br />
-  <label><input type="radio" name="q2" value="c4">
-    4
-  </label><br />
+
 
 
   <button onclick="ShowBlock6()" id="button5">Next Questions</button>
@@ -123,41 +98,34 @@
 
 </div>
 
-<div class="block6" id="block6">
-  Questionblock 6 of 7
+<div class="question" id="block6">
+  I want to spend … per month.
   <br/><label><input type="radio" name="q3" value="c1">
-    1
+    under 10€
   </label><br />
   <label><input type="radio" name="q3" value="c2">
-    2
+    over 10€
   </label><br />
-  <label><input type="radio" name="q3" value="c3">
-    3
-  </label><br />
-  <label><input type="radio" name="q3" value="c4">
-    4
-  </label><br />
+
+
+  <button onclick="ShowBlock7()" id="button6">Next Questions</button>
+
+
 </div>
 
 
-<button onclick="ShowBlock7()" id="button6">Next Questions</button>
 
 
-<div class="block7" id="block7">
-  Questionblock 7 of 7
+
+<div class="question" id="block7">
+  I am very interested in Netflix Original productions.
   <br/><label><input type="radio" name="q3" value="c1">
-    1
+    yes
   </label><br />
   <label><input type="radio" name="q3" value="c2">
-    2
+    no
   </label><br />
-  <label><input type="radio" name="q3" value="c3">
-    3
-  </label><br />
-  <label><input type="radio" name="q3" value="c4">
-    4
-  </label><br />
-</div>
+
 
     <button type="submit" id="submit" onclick="tabulateAnswers()">Submit Your Answers</button>
     <button type="reset" id="reset" onclick="resetAnswer()">Reset</button>
