@@ -1,20 +1,7 @@
 
 class Questionnaire {
   this.questions = [
-    {
-      id: 1,
-      text: "I want to use the streaming service for",
-      answerTextAmazon: "films, documentations",
-      answerTextNetflix: "series",
-      userAnswer: ""
-    },
-    {
-      id: 2,
-      text: "I want to use it ...",
-      answerTextAmazon: "sometimes",
-      answerTextNetflix: "often",
-      userAnswer: "Netflix"
-    }
+    
   ]
   constructor() {
 
