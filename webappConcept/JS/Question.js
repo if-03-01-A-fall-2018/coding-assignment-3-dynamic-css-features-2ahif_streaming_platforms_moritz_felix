@@ -1,7 +1,16 @@
 
-/*class Questionnaire {
-  this.questions = [
+class Questionnaire {
 
+    this.questions = [
+
+    fetch('../json/db.json')
+
+    .then(function(resp){
+        return resp.json();
+    })
+    .catch(function(){
+
+    });
   ]
   constructor() {
 
@@ -22,17 +31,9 @@
   getNumberOfAmazon() {
 
   }
-}*/
+  function fillHtmlBlock()
+  {
+    document.getElementById('question').innerHTML = question
 
-fetch('db.json')
-
-.then(function(resp){
-    return resp.json();
-})
-.then(function(data){
-     
-})
-
-.catch(function(){
-
-});
+  }
+}
