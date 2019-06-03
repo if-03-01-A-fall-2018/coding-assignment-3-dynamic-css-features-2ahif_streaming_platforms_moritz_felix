@@ -1,5 +1,11 @@
 
-class Questionnaire {
+class Questionnaire
+{
+  var i = 0;
+
+  var obj = document.getElementById('questionBlock');
+  obj.addEventListener("load", fillHtmlBlock, false);
+
 
     this.questions = [
 
@@ -12,28 +18,66 @@ class Questionnaire {
 
     });
   ]
-  constructor() {
-
-  }
-
-  getQuestion(i) {
+  
+  getQuestion(i)
+  {
     return questions[i]
   }
 
-  get numberOfQuestions() {
+  get numberOfQuestions()
+  {
     return questions.length
   }
 
-  constructor(questions) {
+  constructor(questions)
+  {
     this.questions = questions
   }
 
-  getNumberOfAmazon() {
-
-  }
   function fillHtmlBlock()
   {
-    document.getElementById('question').innerHTML = question
-
+    document.getElementById('question').innerHTML = questions[i].text;
+    document.getElementById('q1').innerHTML = questions[i].answerTextNetflix;
+    document.getElementById('q2').innerHTML = questions[i].answerTextAmazon;
+    i++;
   }
+}
+
+function tabulateAnswers() {
+
+var netflix = 0;
+var apv = 0;
+
+var choices = document.getElementsByTagName('input');
+
+for (i=0; i<choices.length; i++) {
+
+  if (choices[i].checked) {
+
+    if (choices[i].value == 'c1') {
+      netflix++;
+    }
+    if (choices[i].value == 'c2') {
+      apv++;
+    }
+  }
+}
+
+
+var maxscore = Math.max(netflix,apv);
+
+
+var answerbox = document.getElementById('answer');
+if (netflix == maxscore) {
+  answerbox.innerHTML = "1";
+}
+if (apv == maxscore) {
+  answerbox.innerHTML = "2";
+}
+}
+
+
+function resetAnswer() {
+var answerbox = document.getElementById('answer');
+answerbox.innerHTML = "Your result will show up here!";
 }
