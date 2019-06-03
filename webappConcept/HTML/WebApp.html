@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <script type="text/javascript" src="../JS/webApp.js"></script>
+    <script type="text/javascript" src="../JS/Question.js"></script>
     <link rel="stylesheet" type="text/css" href="../CSS/WebApp.css">
     <title></title>
   </head>
@@ -19,7 +19,7 @@
     </div>
   </section>
 
-    <div class="question" id="block1">
+    <div id="questionBlock">
       <p id="question"></p>
       <br/>
       <input id="q1" type="radio" name="q1" value="c1">
@@ -28,7 +28,8 @@
       <input id="q2" type="radio" name="q2" value="c2">
       <label for="q2"></label>
       <br />
-      <button onclick="ShowBlock2()" id="button1">Next Questions</button>
+      <button onclick="fillHtmlBlock">Next Questions</button>
+      
     </div>
 
   </body>
