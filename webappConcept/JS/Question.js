@@ -18,7 +18,16 @@ class Questionnaire
 
     });
   ]
+<<<<<<< HEAD
   
+=======
+
+  constructor()
+  {
+
+  }
+
+>>>>>>> 09ebfda447620ee7773d437984008831b1d7ef08
   getQuestion(i)
   {
     return questions[i]

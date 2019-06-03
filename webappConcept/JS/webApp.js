@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 window.onload = function() {
   fetch('http://localhost:3000/questions')
     .then(function(resp){
@@ -8,6 +9,8 @@ window.onload = function() {
     });
 }
 
+=======
+>>>>>>> 09ebfda447620ee7773d437984008831b1d7ef08
   function tabulateAnswers() {
 
   var netflix = 0;
