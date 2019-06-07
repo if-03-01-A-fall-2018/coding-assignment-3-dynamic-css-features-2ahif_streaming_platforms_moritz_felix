@@ -1,15 +1,18 @@
-
-h1
-{
-  text-align: center;
+* {
+    box-sizing: border-box;
 }
+
+body {
+    font-family: Arial;
+    padding: 10px;
+    background: #201E1E;
+}
+
 .topnav {
-  overflow: hidden;
-  background-color: #333;
-  width: 100%;
-  margin-bottom: 50px;
-  margin-top: 0;
-  }
+    overflow: hidden;
+    background-color: #333;
+    position: sticky;
+}
 .topnav a {
     float: left;
     display: block;
@@ -25,4 +28,25 @@ h1
 
 .topnav img{
   float: right;
+}
+.StartSiteText
+{
+  border-style: solid;
+  border-radius: 5px;
+  background-color: white;
+  margin: 50px;
+  padding: 50px;
+  box-shadow: 10px 10px 5px grey;
+}
+
+.StartSiteText h2{
+  color: #33FFC7;
+}
+.inputField
+{
+  border-style: solid;
+  border-radius: 5px;
+  background-color: white;
+  margin: 50px;
+  padding: 50px;
 }
