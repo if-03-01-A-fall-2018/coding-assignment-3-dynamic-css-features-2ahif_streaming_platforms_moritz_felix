@@ -1,7 +1,6 @@
 
 class Questionnaire
 {
-  var i = 0;
 
   var obj = document.getElementById('questionBlock');
   obj.addEventListener("load", fillHtmlBlock, false);
@@ -18,37 +17,15 @@ class Questionnaire
 
     });
   ]
-<<<<<<< HEAD
-  
-=======
 
   constructor()
   {
 
   }
 
->>>>>>> 09ebfda447620ee7773d437984008831b1d7ef08
   getQuestion(i)
   {
     return questions[i]
-  }
-
-  get numberOfQuestions()
-  {
-    return questions.length
-  }
-
-  constructor(questions)
-  {
-    this.questions = questions
-  }
-
-  function fillHtmlBlock()
-  {
-    document.getElementById('question').innerHTML = questions[i].text;
-    document.getElementById('q1').innerHTML = questions[i].answerTextNetflix;
-    document.getElementById('q2').innerHTML = questions[i].answerTextAmazon;
-    i++;
   }
 }
 

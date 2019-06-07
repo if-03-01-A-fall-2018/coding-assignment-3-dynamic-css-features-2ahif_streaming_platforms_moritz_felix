@@ -1,35 +1,57 @@
-<<<<<<< HEAD
+var questionIndex = 0;
+var questions;
+
 window.onload = function() {
   fetch('http://localhost:3000/questions')
-    .then(function(resp){
-        console.log(resp.json())
+  .then(response => {
+              if (!response.ok) {
+                  throw new Error("HTTP error " + response.status);
+              }
+              return response.json();
+          })
+    .then(jsonanswer => {
+      questions = jsonanswer;
+      fillHtmlBlock();
     })
     .catch(function(){
       alert("pfui");
     });
 }
 
-=======
->>>>>>> 09ebfda447620ee7773d437984008831b1d7ef08
-  function tabulateAnswers() {
+function fillHtmlBlock()
+{
+  var question = questions[questionIndex];
+  document.getElementById('question').innerHTML = questions[questionIndex].text;
+  document.getElementById('q1').innerHTML = questions[questionIndex].answerTextNetflix;
+  document.getElementById('q2').innerHTML = questions[questionIndex].answerTextAmazon;
+  questionIndex++;
+}
+
+function tabulateAnswers()
+{
 
   var netflix = 0;
   var apv = 0;
 
   var choices = document.getElementsByTagName('input');
 
-  for (i=0; i<choices.length; i++) {
+  for (i=0; i<choices.length; i++)
+  {
 
-    if (choices[i].checked) {
+    if (choices[i].checked)
+    {
 
-      if (choices[i].value == 'c1') {
+    if (choices[i].value == 'c1')
+    {
         netflix++;
-      }
-      if (choices[i].value == 'c2') {
+    }
+
+    if (choices[i].value == 'c2')
+    {
         apv++;
-      }
     }
   }
+}
 
 
   var maxscore = Math.max(netflix,apv);
