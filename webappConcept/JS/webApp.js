@@ -18,13 +18,66 @@ window.onload = function() {
     });
 }
 
+
 function fillHtmlBlock()
 {
+  console.log(questionIndex);
+  setDefault();
+
+  displayGauge();
+
+  if (questionIndex >= questions.length)
+  {
+      document.getElementById('btn').style.display = 'none';
+      return;
+  }
+
+  if (questionIndex + 1 == questions.length)
+  {
+    document.getElementById('btn').innerHTML = "Finish!";
+  }
+
   var question = questions[questionIndex];
+
   document.getElementById('question').innerHTML = questions[questionIndex].text;
-  document.getElementById('q1').innerHTML = questions[questionIndex].answerTextNetflix;
-  document.getElementById('q2').innerHTML = questions[questionIndex].answerTextAmazon;
+  var q1 = document.getElementById('labelQ1').innerHTML = questions[questionIndex].answerTextNetflix;
+  var q2 = document.getElementById('labelQ2').innerHTML = questions[questionIndex].answerTextAmazon;
+
+  if (questionIndex >= 1)
+  {
+      updateAnswerTable();
+  }
+
+
   questionIndex++;
+}
+
+function setDefault()
+{
+  document.getElementById('q1').checked = false;
+  document.getElementById('q2').checked = false;
+}
+
+function displayGauge()
+{
+  var gauge = document.getElementById('gauge');
+  var value = questionIndex;
+
+  gauge.innerHTML = " <meter value='"+ value + "' min='0' max='"+ questions.length +"'></meter>";
+}
+
+function updateAnswerTable()
+{
+  var qIndex = "q"+questionIndex;
+
+  if (document.getElementById('q1').checked == true || document.getElementById('q2').checked == true)
+  {
+    document.getElementById(qIndex).style.backgroundColor = "green";
+  }
+  else {
+    document.getElementById(qIndex).style.backgroundColor = "red";
+  }
+
 }
 
 function tabulateAnswers()

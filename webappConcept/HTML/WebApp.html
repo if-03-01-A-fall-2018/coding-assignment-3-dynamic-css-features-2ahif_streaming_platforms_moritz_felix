@@ -23,13 +23,27 @@
       <p id="question"></p>
       <br/>
       <input id="q1" type="radio" name="q1" value="c1">
-      <label for="q1"></label>
+        <label for="q1" id="labelQ1"></label>
       <br/>
       <input id="q2" type="radio" name="q2" value="c2">
-      <label for="q2"></label>
+        <label for="q2" id="labelQ2"></label>
       <br />
-      <button onclick="fillHtmlBlock">Next Questions</button>
+      <button id="btn" onclick="fillHtmlBlock()">Next Questions</button>
+    </div>
 
+    <div id="gauge"></div>
+
+    <div>
+      <table id="answerTable">
+        <thead>
+          <tr><th colspan= "4">status</th></tr>
+        </thead>
+        <tbody>
+          <tr> <td id="q0">q0</td> <td id="q1">q1</td> <td id="q2">q2</td> </tr>
+          <tr> <td id="q3">q3</td> <td id="q4">q4</td> <td id="q5">q5</td> </tr>
+          <tr> <td id="q6">q6</td> <td id="q7">q7</td> <td></td> </tr>
+        </tbody>
+      </table>
     </div>
 
   </body>
