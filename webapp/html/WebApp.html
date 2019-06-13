@@ -2,8 +2,8 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <script type="text/javascript" src="../JS/webApp.js"></script>
-    <link rel="stylesheet" type="text/css" href="../CSS/WebApp.css">
+    <script type="text/javascript" src="../javascript/webApp.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/WebApp.css">
     <title></title>
   </head>
   <body>
@@ -28,7 +28,16 @@
       <input id="q2" type="radio" name="q2" value="c2">
         <label for="q2" id="labelQ2"></label>
       <br />
-      <button id="btn" onclick="fillHtmlBlock()">Next Questions</button>
+
+      <div class="button-bar">
+        <a class="next" onclick="fillHtmlBlock()">next</a>
+        <a class="prev" onclick="prevQuestion()">prev</a>
+      </div>
+
+      <button id="btn-finish" onclick="tabulateAnswers()">Finish</button>
+      <button id="btn-refresh" onclick="document.location.reload(true)">reset</button>
+
+      <p id="answer"></p>
     </div>
 
     <div id="gauge"></div>

@@ -42,27 +42,39 @@ body {
 .text h2{
   color: #f00;
 }
-table.liveStreaming{float:right;}
-
-table.liveStreaming tr th,td{
-  border: 1px solid black;
-  width: 150px;
-  height: 50px;
-  font-size: 19px;
-}
-table.liveStreaming tr td{
-  text-align: center;
+table.LinkedPages {
+    float: right;
+    margin-top: 200px;
+    margin-right: 100px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 5px;
 }
 
-table.liveStreaming tr td a:link{
-  color:red;
-  text-decoration: none;
+table.liveStreaming td, th {
+    border: 1px solid transparent;
+    height: 30px;
+    transition: all 0.3s;
 }
 
-table.liveStreaming tr td a:visited{
-  color:red;
-  text-decoration: none;
+table.liveStreaming th {
+    background: #DFDFDF;
+    font-weight: bold;
 }
+
+table.liveStreaming td {
+    background: #FAFAFA;
+    text-align: center;
+}
+table.liveStreaming a {
+    text-decoration: none;
+    color: black;
+}
+
+tr:nth-child(even) td { background: #F1F1F1; }
+tr:nth-child(odd) td { background: #FEFEFE; }
+tr td:hover { background: #666; color: #FFF; }
+
 .back-Button a{
   text-decoration: none;
   color: #f00;

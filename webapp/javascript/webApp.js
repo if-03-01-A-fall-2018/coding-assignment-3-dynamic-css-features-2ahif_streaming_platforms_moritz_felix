@@ -28,13 +28,14 @@ function fillHtmlBlock()
 
   if (questionIndex >= questions.length)
   {
-      document.getElementById('btn').style.display = 'none';
+      document.getElementsByClassName('prev').style.display = 'none';
       return;
   }
 
   if (questionIndex + 1 == questions.length)
   {
-    document.getElementById('btn').innerHTML = "Finish!";
+    document.getElementsByClassName('next').style.display = 'none'
+    document.getElementsByClassName('btn-finish').style.display = 'flex';
   }
 
   var question = questions[questionIndex];
@@ -43,13 +44,30 @@ function fillHtmlBlock()
   var q1 = document.getElementById('labelQ1').innerHTML = questions[questionIndex].answerTextNetflix;
   var q2 = document.getElementById('labelQ2').innerHTML = questions[questionIndex].answerTextAmazon;
 
-  if (questionIndex >= 1)
-  {
-      updateAnswerTable();
+  if (questionIndex >= 1) {
+    document.getElementsByClassName('prev').style.display = 'flex';
   }
 
-
   questionIndex++;
+}
+
+function prevQuestion()
+{
+  if (questionIndex <= 1)
+  {
+    document.getElementsByClassName('prev').style.display = 'none';
+    return;
+  }
+  questionIndex = questionIndex - 2;
+  var question = questions[questionIndex];
+
+  document.getElementById('question').innerHTML = questions[questionIndex].text;
+  var q1 = document.getElementById('labelQ1').innerHTML = questions[questionIndex].answerTextNetflix;
+  var q2 = document.getElementById('labelQ2').innerHTML = questions[questionIndex].answerTextAmazon;
+  displayGauge();
+  questionIndex++;
+  console.log(questionIndex);
+
 }
 
 function setDefault()
@@ -66,7 +84,7 @@ function displayGauge()
   gauge.innerHTML = " <meter value='"+ value + "' min='0' max='"+ questions.length +"'></meter>";
 }
 
-function updateAnswerTable()
+/*function updateAnswerTable()
 {
   var qIndex = "q"+questionIndex;
 
@@ -78,7 +96,7 @@ function updateAnswerTable()
     document.getElementById(qIndex).style.backgroundColor = "red";
   }
 
-}
+}*/
 
 function tabulateAnswers()
 {
