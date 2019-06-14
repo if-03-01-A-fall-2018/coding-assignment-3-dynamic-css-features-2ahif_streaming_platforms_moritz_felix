@@ -24,17 +24,19 @@
       <br/>
       <form >
         <input id="q1" type="radio" name="q1" value="c1">
+          <label for="q1" id="labelQ1"></label></br>
         <input id="q2" type="radio" name="q2" value="c2">
+          <label for="q2" id="labelQ2"></label>
       </form>
 
       <button id="btn-next" onclick="fillHtmlBlock()">next</button>
       <button id="btn-prev" onclick="prevQuestion()">prev</button>
       <button id="btn-finish" onclick="tabulateAnswers()">Finish</button>
       <button id="btn-refresh" onclick="document.location.reload(true)">reset</button>
-
-      <p id="answer"></p>
     </div>
 
+    <div id="answer"></div>
+    
     <div id="gauge"></div>
 
     <div>

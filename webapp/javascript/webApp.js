@@ -1,3 +1,5 @@
+https://codepen.io/eduardodangelo/pen/xqGVyV
+
 var questionIndex = 0;
 var questions;
 
@@ -41,8 +43,8 @@ function fillHtmlBlock()
   var question = questions[questionIndex];
 
   document.getElementById('question').innerHTML = questions[questionIndex].text;
-  var q1 = document.getElementById('q1').appendChild = questions[questionIndex].answerTextNetflix;
-  var q2 = document.getElementById('q2').appendChild = questions[questionIndex].answerTextAmazon;
+  var q1 = document.getElementById('labelQ1').innerHTML = questions[questionIndex].answerTextNetflix;
+  var q2 = document.getElementById('labelQ2').innerHTML = questions[questionIndex].answerTextAmazon;
 
   if (questionIndex >= 1)
   {
@@ -71,8 +73,8 @@ function prevQuestion()
   var question = questions[questionIndex];
 
   document.getElementById('question').innerHTML = questions[questionIndex].text;
-  var q1 = document.getElementById('q1').appendChild = questions[questionIndex].answerTextNetflix;
-  var q2 = document.getElementById('q2').appendChild = questions[questionIndex].answerTextAmazon;
+  var q1 = document.getElementById('labelQ1').innerHTML = questions[questionIndex].answerTextNetflix;
+  var q2 = document.getElementById('labelQ2').innerHTML = questions[questionIndex].answerTextAmazon;
   displayGauge();
   questionIndex++;
   console.log(questionIndex);
