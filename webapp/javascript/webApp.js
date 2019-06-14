@@ -28,24 +28,25 @@ function fillHtmlBlock()
 
   if (questionIndex >= questions.length)
   {
-      document.getElementsByClassName('prev').style.display = 'none';
+      document.getElementById('btn-prev').style.display = 'none';
       return;
   }
 
   if (questionIndex + 1 == questions.length)
   {
-    document.getElementsByClassName('next').style.display = 'none'
-    document.getElementsByClassName('btn-finish').style.display = 'flex';
+    document.getElementById('btn-next').style.display = 'none'
+    document.getElementById('btn-finish').style.display = 'flex';
   }
 
   var question = questions[questionIndex];
 
   document.getElementById('question').innerHTML = questions[questionIndex].text;
-  var q1 = document.getElementById('labelQ1').innerHTML = questions[questionIndex].answerTextNetflix;
-  var q2 = document.getElementById('labelQ2').innerHTML = questions[questionIndex].answerTextAmazon;
+  var q1 = document.getElementById('q1').appendChild = questions[questionIndex].answerTextNetflix;
+  var q2 = document.getElementById('q2').appendChild = questions[questionIndex].answerTextAmazon;
 
-  if (questionIndex >= 1) {
-    document.getElementsByClassName('prev').style.display = 'flex';
+  if (questionIndex >= 1)
+  {
+    document.getElementById('btn-prev').style.display = 'flex';
   }
 
   questionIndex++;
@@ -55,15 +56,23 @@ function prevQuestion()
 {
   if (questionIndex <= 1)
   {
-    document.getElementsByClassName('prev').style.display = 'none';
+    document.getElementById('btn-prev').style.display = 'none';
     return;
   }
+
+  if (questionIndex <= questions.length)
+  {
+    console.log("hey");
+    document.getElementById('btn-next').style.display = 'flex'
+    document.getElementById('btn-finish').style.display = 'none';
+  }
+
   questionIndex = questionIndex - 2;
   var question = questions[questionIndex];
 
   document.getElementById('question').innerHTML = questions[questionIndex].text;
-  var q1 = document.getElementById('labelQ1').innerHTML = questions[questionIndex].answerTextNetflix;
-  var q2 = document.getElementById('labelQ2').innerHTML = questions[questionIndex].answerTextAmazon;
+  var q1 = document.getElementById('q1').appendChild = questions[questionIndex].answerTextNetflix;
+  var q2 = document.getElementById('q2').appendChild = questions[questionIndex].answerTextAmazon;
   displayGauge();
   questionIndex++;
   console.log(questionIndex);
@@ -84,9 +93,9 @@ function displayGauge()
   gauge.innerHTML = " <meter value='"+ value + "' min='0' max='"+ questions.length +"'></meter>";
 }
 
-/*function updateAnswerTable()
+function updateAnswerTable()
 {
-  var qIndex = "q"+questionIndex;
+  var qIndex = "q"+questionIndex.toString();
 
   if (document.getElementById('q1').checked == true || document.getElementById('q2').checked == true)
   {
@@ -96,11 +105,12 @@ function displayGauge()
     document.getElementById(qIndex).style.backgroundColor = "red";
   }
 
-}*/
+}
 
 function tabulateAnswers()
 {
 
+  displayGauge();
   var netflix = 0;
   var apv = 0;
 

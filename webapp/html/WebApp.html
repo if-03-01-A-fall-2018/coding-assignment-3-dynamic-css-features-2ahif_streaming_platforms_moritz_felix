@@ -22,18 +22,13 @@
     <div id="questionBlock">
       <p id="question"></p>
       <br/>
-      <input id="q1" type="radio" name="q1" value="c1">
-        <label for="q1" id="labelQ1"></label>
-      <br/>
-      <input id="q2" type="radio" name="q2" value="c2">
-        <label for="q2" id="labelQ2"></label>
-      <br />
+      <form >
+        <input id="q1" type="radio" name="q1" value="c1">
+        <input id="q2" type="radio" name="q2" value="c2">
+      </form>
 
-      <div class="button-bar">
-        <a class="next" onclick="fillHtmlBlock()">next</a>
-        <a class="prev" onclick="prevQuestion()">prev</a>
-      </div>
-
+      <button id="btn-next" onclick="fillHtmlBlock()">next</button>
+      <button id="btn-prev" onclick="prevQuestion()">prev</button>
       <button id="btn-finish" onclick="tabulateAnswers()">Finish</button>
       <button id="btn-refresh" onclick="document.location.reload(true)">reset</button>
 

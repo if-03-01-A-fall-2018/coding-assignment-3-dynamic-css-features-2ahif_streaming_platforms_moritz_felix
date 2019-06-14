@@ -66,14 +66,8 @@ body{
    display: block;
 }
 
-.next a
+#btn-prev, #btn-finish
 {
-  display: flex;
-}
-
-.prev
-{
-  position: fixed;
   display: none;
 }
 
