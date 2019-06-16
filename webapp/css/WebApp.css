@@ -1,8 +1,4 @@
 body{
-  margin: 0px 0px 0px 0px;
-	padding: 0px 0px 0px 0px;
-	font-family: verdana, arial, helvetica, sans-serif;
-	color: #ccc;
 	background-color: white;
 	text-align: center;
 }
@@ -25,6 +21,8 @@ body{
 
 .topnav a:hover {
     background-color: #ddd;
+    text-decoration: none;
+    color: white;
 }
 
 .topnav img{
@@ -33,29 +31,19 @@ body{
 
 #answer
 {
-  border-style: solid;
-  border-radius: 5px;
-  background-color: white;
-  padding: 10px;
-  box-shadow: 10px 10px 5px grey;
-  height: 30px;
-  width: 100px;
-  position: absolute;
-  left: 40%;
-  margin: 50px;
-  padding: 50px;
-}   
-
-#reset, #submit
-{
-  position: absolute;
-  left: 40%;
-  margin-left: 50px;
-  margin-top: 750px;
-}
-#submit
-{
-  margin-right: 70px;
+	padding-top: 40px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 30px;
+	width: 500px;
+	text-align:left;
+	background: #666;
+	border: 5px solid #ccc;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	voice-family: "\"}\"";
+	voice-family:inherit;
 }
 
 #gauge
@@ -64,109 +52,83 @@ body{
    width: 450px;
    height: 50px;
    display: block;
+	 transition: all 1s;
 }
 
 #btn-prev, #btn-finish
 {
-  display: none;
+  display: none
 }
-
-table.LinkedPages {
-    float: right;
-    margin-top: 200px;
-    margin-right: 100px;
-    border-style: solid;
-    border-color: black;
-    border-radius: 5px;
-}
-
-table.LinkedPages td, th {
-    border: 1px solid transparent;
-    height: 30px;
-    transition: all 0.3s;
-}
-
-table.LinkedPages th {
-    background: #DFDFDF;
-    font-weight: bold;
-}
-
-table.LinkedPages td {
-    background: #FAFAFA;
-    text-align: center;
-}
-table.LinkedPages a {
-    text-decoration: none;
-    color: black;
-}
-
-tr:nth-child(even) td { background: #F1F1F1; }
-tr:nth-child(odd) td { background: #FEFEFE; }
-tr td:hover { background: #666; color: #FFF; }
-
 #questionBlock {
-  width: 600px;
-	padding: 100px;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	margin-right: auto;
-	margin-left: auto;
+	padding-top: 40px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 30px;
+	text-align:left;
 	background: #666;
 	border: 5px solid #ccc;
-	text-align:left;
-	width: 400px;
+	margin: auto;
 	voice-family: "\"}\"";
 	voice-family:inherit;
-	width: 370px;
-
+	width: 500px;
+	height: 300px;
 }
 
-.button-bar {
-  margin: 22px; auto;
-  height: auto;
-  padding: 22px * 2;
+#question
+{
+	text-align:center;
+	margin-bottom: 10px;
+	line-height: 1.5;
+  display: inline-block;
+  vertical-align: middle;
 }
 
-.button{
+#btn-next {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: white;
+  border: none;
+	margin: auto;
+  color: black;
+  text-align: center;
+  font-size: 15px;
+  padding: 10px;
+  width: 80px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+#btn-next span {
+  cursor: pointer;
+  display: inline-block;
   position: relative;
-  margin: 0;
-  padding-left: 22px;
-  padding-right: 22px;
-  padding-top: (22px / 5);
-  padding-bottom: (22px / 5);
-  background: #0d5287;
-  color: white;
-  font-size: 14px;
+  transition: 01s;
 }
 
-.button::after {
-  content: '';
+#btn-next span:after {
+  content: '\00bb';
   position: absolute;
+  opacity: 0;
   top: 0;
-  width: 0;
-  height: 0;
+  right: -20px;
+  transition: 0.5s;
 }
 
-.button:hover { background: #0585e8; }
-
-.next::after, .prev::after { border-style: solid; }
-
-.next::after {
-  right: -22px;
-  border-width: 22px / 2;
-  border-color: transparent transparent transparent #0d5287;
+#btn-next:hover span {
+  padding-right: 25px;
 }
 
-.next:hover::after {
-  border-left-color: #0585e8;
+#btn-next:hover span:after {
+  opacity: 1;
+  right: 0;
 }
-
-.prev::after {
-  left: -22px;
-  border-color: transparent #0d5287 transparent transparent;
-  border-width: 22px / 2;
-}
-
-.prev:hover::after {
-  border-right-color: #0585e8;
+#btn-refresh
+{
+  border-radius: 4px;
+  background-color: white;
+  margin-top: 5px;
+  margin-left:0%;
+  margin-right:0%;
+  padding: 10px;
+  width: 80px;
 }

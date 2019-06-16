@@ -9,9 +9,11 @@ body {
 }
 
 .topnav {
-    overflow: hidden;
-    background-color: #333;
-    position: sticky;
+  overflow: hidden;
+  background-color: #333;
+  width: 100%;
+  margin-bottom: 50px;
+  margin-top: 0;
 }
 .topnav a {
     float: left;

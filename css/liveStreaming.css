@@ -2,10 +2,13 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial;
+body
+{
+  font-family: Arial;
+  background: #201E1E;
+}
+body section{
     padding: 10px;
-    background-color: #201E1E;
 }
 
 .topnav {

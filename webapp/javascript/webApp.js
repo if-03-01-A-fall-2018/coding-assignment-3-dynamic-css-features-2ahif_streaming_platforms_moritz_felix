@@ -13,13 +13,24 @@ window.onload = function() {
           })
     .then(jsonanswer => {
       questions = jsonanswer;
-      fillHtmlBlock();
+      welcomeUser();
     })
     .catch(function(){
       alert("pfui");
     });
 }
 
+function welcomeUser()
+{
+  var button = document.createElement("button");
+  button.id = 'start';
+
+  var buttonLabel = document.createElement("LABEL");
+  buttonLabel.setAttribute("for", "start");
+  buttonLabel.innerHTML = "Welcome to the Questionnaire, click start to beginn";
+
+  button.onclick = fillHtmlBlock();
+}
 
 function fillHtmlBlock()
 {
@@ -92,21 +103,7 @@ function displayGauge()
   var gauge = document.getElementById('gauge');
   var value = questionIndex;
 
-  gauge.innerHTML = " <meter value='"+ value + "' min='0' max='"+ questions.length +"'></meter>";
-}
-
-function updateAnswerTable()
-{
-  var qIndex = "q"+questionIndex.toString();
-
-  if (document.getElementById('q1').checked == true || document.getElementById('q2').checked == true)
-  {
-    document.getElementById(qIndex).style.backgroundColor = "green";
-  }
-  else {
-    document.getElementById(qIndex).style.backgroundColor = "red";
-  }
-
+  gauge.innerHTML = " <meter value='"+ questionIndex + "' min='0' max='"+ questions.length +"'></meter>";
 }
 
 function tabulateAnswers()
