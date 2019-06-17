@@ -1,0 +1,46 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "text": "I want to use the streaming service for",
+      "answerTextAmazon": "films, documentations",
+      "answerTextNetflix": "series"
+    },
+    {
+      "id": 2,
+      "text": "I want to use it",
+      "answerTextAmazon": "sometimes",
+      "answerTextNetflix": "often"
+    },
+    {
+      "id": 3,
+      "text": "I only want to ",
+      "answerTextAmazon": "films, documentations",
+      "answerTextNetflix": "series"
+    },
+    {
+      "id": 4,
+      "text": "I want to use further service like music streaming or prime delivery service as well",
+      "answerTextAmazon": "further services",
+      "answerTextNetflix": " just streaming films, etc."
+    },
+    {
+      "id": 5,
+      "text": "I want to spend ... per month",
+      "answerTextAmazon": "under 10$",
+      "answerTextNetflix": "over 10$"
+    },
+    {
+      "id": 6,
+      "text": "I want ... users to stream at the same time ",
+      "answerTextAmazon": "fewer than 2",
+      "answerTextNetflix": "more then 2"
+    },
+    {
+      "id": 7,
+      "text": "I am very interested in Netflix Original productions",
+      "answerTextNetflix": "yes",
+      "answerTextAmazon": "no"
+    }
+  ]
+}

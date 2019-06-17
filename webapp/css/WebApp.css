@@ -1,0 +1,135 @@
+body{
+	background-color: white;
+	text-align: center;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  width: 100%;
+  margin-bottom: 50px;
+  margin-top: 0;
+  }
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    text-decoration: none;
+    color: white;
+}
+
+.topnav img{
+  float: right;
+}
+
+#answer
+{
+	padding-top: 40px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 30px;
+	width: 500px;
+	text-align:left;
+	background: #666;
+	border: 5px solid #ccc;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	voice-family: "\"}\"";
+	voice-family:inherit;
+}
+
+#gauge
+{
+  margin: 0 auto 4.5em;
+   width: 450px;
+   height: 50px;
+   display: block;
+	 transition: all 1s;
+}
+
+#btn-prev, #btn-finish
+{
+	margin: auto;
+  display: none !important;
+}
+#questionBlock {
+	padding-top: 40px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 30px;
+	text-align:left;
+	background: #666;
+	border: 5px solid #ccc;
+	margin: auto;
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	width: 500px;
+	height: 300px;
+}
+
+#question
+{
+	text-align:center;
+	margin-bottom: 10px;
+	line-height: 1.5;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#btn-next, #btn-finish{
+  display: inline-block;
+  border-radius: 4px;
+  background-color: white;
+  border: none;
+	margin: auto;
+  color: black;
+  text-align: center;
+  font-size: 15px;
+  padding: 10px;
+  width: 80px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+#btn-next span, #btn-finish span{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 01s;
+}
+
+#btn-next span:after, #btn-finish span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+#btn-next:hover span, #btn-finish :hover span{
+  padding-right: 25px;
+}
+
+#btn-next:hover span:after, #btn-finish:hover span:after{
+  opacity: 1;
+  right: 0;
+}
+#btn-refresh
+{
+  border-radius: 4px;
+  background-color: white;
+  margin-top: 5px;
+  margin-left:0%;
+  margin-right:0%;
+  padding: 10px;
+  width: 80px;
+}

@@ -2,12 +2,11 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial;
-    padding: 10px;
-    background-color: #201E1E;
+body
+{
+  font-family: Arial;
+  background: #201E1E;
 }
-
 .topnav {
     overflow: hidden;
     background-color: #333;
@@ -24,6 +23,8 @@ body {
 
 .topnav a:hover {
     background-color: #ddd;
+    text-decoration: none;
+    color: white;
 }
 
 .topnav img{
