@@ -57,7 +57,8 @@ body{
 
 #btn-prev, #btn-finish
 {
-  display: none
+	margin: auto;
+  display: none !important;
 }
 #questionBlock {
 	padding-top: 40px;
@@ -83,7 +84,7 @@ body{
   vertical-align: middle;
 }
 
-#btn-next {
+#btn-next, #btn-finish{
   display: inline-block;
   border-radius: 4px;
   background-color: white;
@@ -98,14 +99,14 @@ body{
   cursor: pointer;
 }
 
-#btn-next span {
+#btn-next span, #btn-finish span{
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 01s;
 }
 
-#btn-next span:after {
+#btn-next span:after, #btn-finish span:after {
   content: '\00bb';
   position: absolute;
   opacity: 0;
@@ -114,11 +115,11 @@ body{
   transition: 0.5s;
 }
 
-#btn-next:hover span {
+#btn-next:hover span, #btn-finish :hover span{
   padding-right: 25px;
 }
 
-#btn-next:hover span:after {
+#btn-next:hover span:after, #btn-finish:hover span:after{
   opacity: 1;
   right: 0;
 }

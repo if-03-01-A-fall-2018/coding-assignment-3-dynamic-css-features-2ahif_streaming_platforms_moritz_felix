@@ -1,5 +1,3 @@
-https://codepen.io/eduardodangelo/pen/xqGVyV
-
 var questionIndex = 0;
 var questions;
 
@@ -13,23 +11,11 @@ window.onload = function() {
           })
     .then(jsonanswer => {
       questions = jsonanswer;
-      welcomeUser();
+      fillHtmlBlock();
     })
     .catch(function(){
       alert("pfui");
     });
-}
-
-function welcomeUser()
-{
-  var button = document.createElement("button");
-  button.id = 'start';
-
-  var buttonLabel = document.createElement("LABEL");
-  buttonLabel.setAttribute("for", "start");
-  buttonLabel.innerHTML = "Welcome to the Questionnaire, click start to beginn";
-
-  button.onclick = fillHtmlBlock();
 }
 
 function fillHtmlBlock()
@@ -48,7 +34,9 @@ function fillHtmlBlock()
   if (questionIndex + 1 == questions.length)
   {
     document.getElementById('btn-next').style.display = 'none'
-    document.getElementById('btn-finish').style.display = 'flex';
+    var btnfinish = document.getElementById('btn-finish');
+    btnfinish.setAttribute('style', 'display: flex !important');
+
   }
 
   var question = questions[questionIndex];
