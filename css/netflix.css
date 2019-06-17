@@ -30,7 +30,7 @@ body
 .topnav img{
   float: right;
 }
-.netflixText
+.InformationText
 {
   border-style: solid;
   border-radius: 5px;
@@ -40,9 +40,18 @@ body
   box-shadow: 10px 10px 5px grey;
 }
 
-.netflixText h2{
+#netflix h2{
   color: #f00;
 }
+
+#amazon h2 {
+  color: #23D6F3;
+}
+
+#hulu h2 {
+  color: #9BF323;
+
+
 .inputField
 {
   border-style: solid;
