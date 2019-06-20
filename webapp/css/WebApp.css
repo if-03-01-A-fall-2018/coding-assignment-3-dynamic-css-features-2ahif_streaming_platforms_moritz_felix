@@ -44,6 +44,7 @@ body{
 	margin-top: 10px;
 	voice-family: "\"}\"";
 	voice-family:inherit;
+	color: black;
 }
 
 #gauge

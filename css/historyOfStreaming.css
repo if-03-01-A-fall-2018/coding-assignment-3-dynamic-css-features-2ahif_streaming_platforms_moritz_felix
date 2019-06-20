@@ -11,6 +11,14 @@ body section{
     padding: 10px;
 }
 
+#what-is-streaming
+{
+  border-style: solid;
+  width: 650px;
+  border-color: white;
+  border-radius: 5px;
+}
+
 .topnav {
   overflow: hidden;
   background-color: #333;
