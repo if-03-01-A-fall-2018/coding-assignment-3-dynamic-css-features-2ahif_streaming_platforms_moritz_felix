@@ -123,9 +123,9 @@ function tabulateAnswers()
 
   var answerbox = document.getElementById('answer');
   if (netflix == maxscore) {
-    answerbox.innerHTML = "The better choice for you is Netflix <a href="'streamingservices.html'">About Netflix</a>";
+    answerbox.innerHTML = "The better choice for you is Netflix <a href=\"../../html/streamingservices.html\">About Netflix</a>";
   }
   if (apv == maxscore) {
-    answerbox.innerHTML = "The better choice for you is Amazon Video <a href="'streamingservices.html'">About Amazon Prime</a>";
+    answerbox.innerHTML = "The better choice for you is Amazon Video <a href=\"../../html/streamingservices.html\">About Amazon Prime</a>";
   }
 }

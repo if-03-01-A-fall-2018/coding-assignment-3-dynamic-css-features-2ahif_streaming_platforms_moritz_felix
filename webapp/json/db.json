@@ -14,9 +14,9 @@
     },
     {
       "id": 3,
-      "text": "I only want to ",
-      "answerTextAmazon": "films, documentations",
-      "answerTextNetflix": "series"
+      "text": "I want to stream the latest movies even if it costs a bit",
+      "answerTextAmazon": "yes",
+      "answerTextNetflix": "no"
     },
     {
       "id": 4,

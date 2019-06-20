@@ -42,28 +42,6 @@ body
   box-shadow: 10px 10px 5px grey;
 }
 
-body
-{
-  background:#10e88a;
-  color:#fff; font-family: 'Roboto', sans-serif;
-  margin:0;
-  transition:all 200ms;
-  will-change:background;
-}
-
-article
-{
-  display:block;
-  width:100%;
-  text-align:right;
-  height:100vh;
-  margin:6em 0 0 0;
-}
-
-h1{font-size:15em; font-weight:900; margin:0 0.1em; }
-article p{width:50%; float:right; font-size:1.1em; margin:0 2em;}
-.clear{clear:both;}
-
 #netflix h2{
   color: #f00;
 }
@@ -74,14 +52,4 @@ article p{width:50%; float:right; font-size:1.1em; margin:0 2em;}
 
 #hulu h2 {
   color: #9BF323;
-
-
-.inputField
-{
-  border-style: solid;
-  border-radius: 5px;
-  background-color: white;
-  margin: 50px;
-  padding: 50px;
-  box-shadow: 10px 10px 5px grey;
 }
