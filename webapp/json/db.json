@@ -41,6 +41,12 @@
       "text": "I am very interested in Netflix Original productions",
       "answerTextNetflix": "yes",
       "answerTextAmazon": "no"
+    },
+    {
+      "id": 7,
+      "text": "I am very interested in Amazon Original productions",
+      "answerTextNetflix": "no",
+      "answerTextAmazon": "yes"
     }
   ]
 }

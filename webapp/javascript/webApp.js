@@ -14,13 +14,12 @@ window.onload = function() {
       fillHtmlBlock();
     })
     .catch(function(){
-      alert("pfui");
+      alert("something went wrong with your json server");
     });
 }
 
 function fillHtmlBlock()
 {
-  console.log(questionIndex);
   setDefault();
 
   displayGauge();
@@ -109,33 +108,24 @@ function tabulateAnswers()
     if (choices[i].checked)
     {
 
-    if (choices[i].value == 'c1')
-    {
+      if (choices[i].value == 'c1')
+      {
         netflix++;
-    }
+      }
 
-    if (choices[i].value == 'c2')
-    {
+      if (choices[i].value == 'c2')
+      {
         apv++;
+      }
     }
   }
-}
-
-
   var maxscore = Math.max(netflix,apv);
-
 
   var answerbox = document.getElementById('answer');
   if (netflix == maxscore) {
-    answerbox.innerHTML = "1";
+    answerbox.innerHTML = "The better choice for you is Netflix <a href="'streamingservices.html'">About Netflix</a>";
   }
   if (apv == maxscore) {
-    answerbox.innerHTML = "2";
+    answerbox.innerHTML = "The better choice for you is Amazon Video <a href="'streamingservices.html'">About Amazon Prime</a>";
   }
-}
-
-
-function resetAnswer() {
-  var answerbox = document.getElementById('answer');
-  answerbox.innerHTML = "Your result will show up here!";
 }
