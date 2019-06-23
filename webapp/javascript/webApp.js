@@ -1,7 +1,8 @@
-var questionIndex = 0;
-var questions;
-var netflix = 0;
-var apv = 0;
+let questionIndex = 0;
+let questions;
+let netflix = 0;
+let apv = 0;
+let answerArray = new Array(8);
 
 window.onload = function() {
   fetch('http://localhost:3000/questions')
@@ -20,10 +21,16 @@ window.onload = function() {
     });
 }
 
+function changeState()
+{
+  console.log(document.getElementById('btn-next').disabled);
+  document.getElementById('btn-next').disabled = false;
+
+  document.getElementById('btn-next').classList.remove("disabled-button");
+}
+
 function fillHtmlBlock()
 {
-  setDefault();
-
   displayGauge();
 
   if (questionIndex >= questions.length)
@@ -53,6 +60,9 @@ function fillHtmlBlock()
 
 
   questionIndex++;
+  setDefault();
+  document.getElementById('btn-next').disabled = true;
+  document.getElementById('btn-next').classList.add("disabled-button");
 }
 
 function prevQuestion()
@@ -69,15 +79,25 @@ function prevQuestion()
     document.getElementById('btn-finish').style.display = 'none';
   }
 
+  if (answerArray[questionIndex] == "netflix")
+  {
+      netflix--;
+  }
+  else {
+    apv--;
+  }
+
   questionIndex = questionIndex - 2;
   var question = questions[questionIndex];
 
   document.getElementById('question').innerHTML = questions[questionIndex].text;
   var q1 = document.getElementById('labelQ1').innerHTML = questions[questionIndex].answerTextNetflix;
   var q2 = document.getElementById('labelQ2').innerHTML = questions[questionIndex].answerTextAmazon;
+
+
+
   displayGauge();
   questionIndex++;
-
 }
 
 function setDefault()
@@ -97,12 +117,15 @@ function evaluateInput()
 {
   console.log(document.getElementById('q1').checked);
   console.log(document.getElementById('q2').checked);
-  if (document.getElementById('q1').checked == true) {
-    alert("lalal");
+
+  if (document.getElementById('q1').checked == true)
+  {
+    answerArray[questionIndex] = "netflix";
     netflix++;
   }
-  if (document.getElementById('q2').checked == true) {
-    alert("lulul");
+  if (document.getElementById('q2').checked == true)
+  {
+    answerArray[questionIndex] = "ap";
     apv++;
   }
   console.log(netflix);
@@ -120,7 +143,7 @@ function ShowResult()
 
   var answerbox = document.getElementById('answer');
   if (netflix == maxscore) {
-    answerbox.innerHTML = "The better choice for you is Netflix <a href=\"../../html/streamingservices.html\">About Amazon</a><br>";
+    answerbox.innerHTML = "The better choice for you is Netflix <a href=\"../../html/streamingservices.html\">About Netflix</a><br>";
   }
   if (apv == maxscore) {
     answerbox.innerHTML = "The better choice for you is Amazon Video <a href=\"../../html/streamingservices.html\">About Amazon</a>";

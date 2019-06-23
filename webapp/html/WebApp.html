@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <script type="text/javascript" src="../javascript/webApp.js"></script>
     <link rel="stylesheet" type="text/css" href="../css/WebApp.css">
+    <script type="text/javascript" href="../../bootstrap-4.2.1-dist/js/bootstrap.min.js">
+
+    </script>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
@@ -25,14 +28,18 @@
   <div id="questionBlock">
     <p id="question"></p>
     <br/>
-    <form>
-      <input id="q1" type="radio" name="q1" value="c1">
-        <label for="q1" id="labelQ1"></label></br>
-      <input id="q2" type="radio" name="q2" value="c2">
-        <label for="q2" id="labelQ2"></label>
-    </form>
+    <div class="form-check">
+      <input onclick="changeState()"class="form-check-input" type="radio" name="exampleRadios" id="q1" value="option1">
+        <label id="labelQ1" class="form-check-label" for="q1">
+        </label>
+    </div>
+    <div class="form-check">
+      <input onclick="changeState()"class="form-check-input" type="radio" name="exampleRadios" id="q2" value="option2">
+      <label id="labelQ2" class="form-check-label" for="q2">
+      </label>
+    </div>
 
-    <button id="btn-next" onclick="fillHtmlBlock()"><span>next</span></button>
+    <button id="btn-next" class="disabled-button" onclick="fillHtmlBlock()"><span>next</span></button>
     <button id="btn-prev" onclick="prevQuestion()">prev</button>
     <button id="btn-refresh" onclick="document.location.reload(true)"><i class="fa fa-refresh"></i></button>
     <button id="btn-finish" onclick="ShowResult()">Finish</button>
