@@ -1,5 +1,7 @@
 var questionIndex = 0;
 var questions;
+var netflix = 0;
+var apv = 0;
 
 window.onload = function() {
   fetch('http://localhost:3000/questions')
@@ -35,7 +37,12 @@ function fillHtmlBlock()
     document.getElementById('btn-next').style.display = 'none'
     var btnfinish = document.getElementById('btn-finish');
     btnfinish.setAttribute('style', 'display: flex !important');
+  }
 
+  if (questionIndex >= 1)
+  {
+    document.getElementById('btn-prev').style.display = 'flex';
+    evaluateInput();
   }
 
   var question = questions[questionIndex];
@@ -44,10 +51,6 @@ function fillHtmlBlock()
   var q1 = document.getElementById('labelQ1').innerHTML = questions[questionIndex].answerTextNetflix;
   var q2 = document.getElementById('labelQ2').innerHTML = questions[questionIndex].answerTextAmazon;
 
-  if (questionIndex >= 1)
-  {
-    document.getElementById('btn-prev').style.display = 'flex';
-  }
 
   questionIndex++;
 }
@@ -62,7 +65,6 @@ function prevQuestion()
 
   if (questionIndex <= questions.length)
   {
-    console.log("hey");
     document.getElementById('btn-next').style.display = 'flex'
     document.getElementById('btn-finish').style.display = 'none';
   }
@@ -75,7 +77,6 @@ function prevQuestion()
   var q2 = document.getElementById('labelQ2').innerHTML = questions[questionIndex].answerTextAmazon;
   displayGauge();
   questionIndex++;
-  console.log(questionIndex);
 
 }
 
@@ -87,45 +88,45 @@ function setDefault()
 
 function displayGauge()
 {
-  var gauge = document.getElementById('gauge');
-  var value = questionIndex;
-
-  gauge.innerHTML = " <meter value='"+ questionIndex + "' min='0' max='"+ questions.length +"'></meter>";
+  var value = questionIndex/question.length;
+  var pb = document.getElementById('bar');
+  pb.value = questionIndex;
 }
 
-function tabulateAnswers()
+function evaluateInput()
 {
-
-  displayGauge();
-  var netflix = 0;
-  var apv = 0;
-
-  var choices = document.getElementsByTagName('input');
-
-  for (i=0; i<choices.length; i++)
-  {
-
-    if (choices[i].checked)
-    {
-
-      if (choices[i].value == 'c1')
-      {
-        netflix++;
-      }
-
-      if (choices[i].value == 'c2')
-      {
-        apv++;
-      }
-    }
+  console.log(document.getElementById('q1').checked);
+  console.log(document.getElementById('q2').checked);
+  if (document.getElementById('q1').checked == true) {
+    alert("lalal");
+    netflix++;
   }
+  if (document.getElementById('q2').checked == true) {
+    alert("lulul");
+    apv++;
+  }
+  console.log(netflix);
+  console.log(apv);
+}
+
+function ShowResult()
+{
+  displayGauge();
+
+  var btnfinish = document.getElementById('btn-finish');
+  btnfinish.setAttribute('style', 'display: none !important');
+
   var maxscore = Math.max(netflix,apv);
 
   var answerbox = document.getElementById('answer');
   if (netflix == maxscore) {
-    answerbox.innerHTML = "The better choice for you is Netflix <a href=\"../../html/streamingservices.html\">About Netflix</a>";
+    answerbox.innerHTML = "The better choice for you is Netflix <a href=\"../../html/streamingservices.html\">About Amazon</a><br>";
   }
   if (apv == maxscore) {
     answerbox.innerHTML = "The better choice for you is Amazon Video <a href=\"../../html/streamingservices.html\">About Amazon</a>";
+    console.log(apv);
+    console.log(questions.length);
+    var string = String(apv/questions.length);
+    answerbox.innerHTML += string+"%";
   }
 }

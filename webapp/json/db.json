@@ -8,7 +8,7 @@
     },
     {
       "id": 2,
-      "text": "I want to use it",
+      "text": "I use the streaming services",
       "answerTextAmazon": "sometimes",
       "answerTextNetflix": "often"
     },
@@ -43,7 +43,7 @@
       "answerTextAmazon": "no"
     },
     {
-      "id": 7,
+      "id": 8,
       "text": "I am very interested in Amazon Original productions",
       "answerTextNetflix": "no",
       "answerTextAmazon": "yes"
