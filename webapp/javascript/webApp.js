@@ -23,32 +23,32 @@ window.onload = function() {
 
 function changeState()
 {
-  console.log(document.getElementById('btn-next').disabled);
   document.getElementById('btn-next').disabled = false;
-
   document.getElementById('btn-next').classList.remove("disabled-button");
 }
 
 function fillHtmlBlock()
 {
+  var btnNext = document.getElementById('btn-next');
+  var btnPrev = document.getElementById('btn-prev');
   displayGauge();
 
   if (questionIndex >= questions.length)
   {
-      document.getElementById('btn-prev').style.display = 'none';
+      btnPrev.style.display = 'none';
       return;
   }
 
   if (questionIndex + 1 == questions.length)
   {
-    document.getElementById('btn-next').style.display = 'none'
+    btnNext.style.display = 'none'
     var btnfinish = document.getElementById('btn-finish');
     btnfinish.setAttribute('style', 'display: flex !important');
   }
 
   if (questionIndex >= 1)
   {
-    document.getElementById('btn-prev').style.display = 'flex';
+    btnPrev.style.display = 'flex';
     evaluateInput();
   }
 
@@ -58,15 +58,22 @@ function fillHtmlBlock()
   var q1 = document.getElementById('labelQ1').innerHTML = questions[questionIndex].answerTextNetflix;
   var q2 = document.getElementById('labelQ2').innerHTML = questions[questionIndex].answerTextAmazon;
 
+  if (answerArray[questionIndex] == "netflix") {
+    document.getElementById('q1').checked = true;
+  }
+  else {
+    document.getElementById('q2').checked = true;
+  }
 
   questionIndex++;
   setDefault();
-  document.getElementById('btn-next').disabled = true;
-  document.getElementById('btn-next').classList.add("disabled-button");
+  btnNext.disabled = true;
+  btnNext.classList.add("disabled-button");
 }
 
 function prevQuestion()
 {
+
   if (questionIndex <= 1)
   {
     document.getElementById('btn-prev').style.display = 'none';
@@ -94,7 +101,13 @@ function prevQuestion()
   var q1 = document.getElementById('labelQ1').innerHTML = questions[questionIndex].answerTextNetflix;
   var q2 = document.getElementById('labelQ2').innerHTML = questions[questionIndex].answerTextAmazon;
 
+  if (answerArray[questionIndex] == "netflix") {
+    document.getElementById('q1').checked = true;
+  }
+  else {
+    document.getElementById('q2').checked = true;
 
+  }
 
   displayGauge();
   questionIndex++;
@@ -115,9 +128,6 @@ function displayGauge()
 
 function evaluateInput()
 {
-  console.log(document.getElementById('q1').checked);
-  console.log(document.getElementById('q2').checked);
-
   if (document.getElementById('q1').checked == true)
   {
     answerArray[questionIndex] = "netflix";
@@ -128,8 +138,6 @@ function evaluateInput()
     answerArray[questionIndex] = "ap";
     apv++;
   }
-  console.log(netflix);
-  console.log(apv);
 }
 
 function ShowResult()
@@ -143,13 +151,12 @@ function ShowResult()
 
   var answerbox = document.getElementById('answer');
   if (netflix == maxscore) {
-    answerbox.innerHTML = "The better choice for you is Netflix <a href=\"../../html/streamingservices.html\">About Netflix</a><br>";
+    answerbox.innerHTML = "The better choice for you is Netflix. Click <a href=\"../../html/streamingservices.html\">Here</a> for futher information<br>";
+      answerbox.innerHTML += String(parseInt((((maxscore+1)/questions.length)*100)))+"%";
+      console.log(maxscore);
   }
   if (apv == maxscore) {
-    answerbox.innerHTML = "The better choice for you is Amazon Video <a href=\"../../html/streamingservices.html\">About Amazon</a>";
-    console.log(apv);
-    console.log(questions.length);
-    var string = String(apv/questions.length);
-    answerbox.innerHTML += string+"%";
+    answerbox.innerHTML = "The better choice for you is Amazon Video. Click here for futher information <a href=\"../../html/streamingservices.html\">About Amazon</a>";
+    answerbox.innerHTML += String(parseInt((((maxscore+1)/questions.length)*100)))+"%";
   }
 }
